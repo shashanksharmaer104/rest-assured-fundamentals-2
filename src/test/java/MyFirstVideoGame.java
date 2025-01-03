@@ -14,7 +14,6 @@ public class MyFirstVideoGame extends VideoGameConfig {
                 .get("/videogame")
         .then()
                 .log().all();
-
     }
 
     @Test
