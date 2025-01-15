@@ -83,9 +83,18 @@ public class VideoGameTests extends VideoGameConfig {
     @Test
     public void deleteGame() {
         given()
-                .accept("text/plain")
+                .accept("text/plain") //accept type is different in delete case
         .when()
                 .delete("/videogame/4")
+        .then();
+    }
+
+    @Test
+    public void getSingleGame() {
+        given()
+                .pathParam("videoGameId", 5)
+        .when()
+                .get(VideoGameEndpoints.SINGLE_VIDEO_GAME)
         .then();
     }
 
