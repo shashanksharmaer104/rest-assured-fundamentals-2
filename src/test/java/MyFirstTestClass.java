@@ -7,9 +7,12 @@ public class MyFirstTestClass extends TestConfig {
 
     @Test
     public void myFirstTest() {
-        given().log().all()
-                .when().get("/videogame")
-                .then();
+        given()
+                .log().all()
+        .when()
+                .get("/videogame")
+        .then()
+                .log().all();
     }
 
 }
